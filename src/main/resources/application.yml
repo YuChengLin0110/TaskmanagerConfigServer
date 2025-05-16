@@ -1,0 +1,13 @@
+server:
+ port: 8888
+ 
+spring:
+ application:
+  name: taskmanager-config-server
+ cloud:
+  config:
+   server:
+    git: 
+     uri: https://github.com/YuChengLin0110/TaskManagerConfigRepo.git
+     clone-on-start: true   #啟動時就會把 Git 倉庫 clone 下來
+     default-label: master  #使用的分支
